@@ -1,0 +1,49 @@
+﻿@foreach(Person p in Model){
+    <div class="container">
+        <div class="row">
+            <div class="col">ID</div>
+            <div class="col-10">
+                @p.id
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">First Name</div>
+            <div class="col-10">
+                @p.firstName
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">Last Name</div>
+            <div class="col-10">
+                @p.lastName
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">Birthday</div>
+            <div class="col-10">
+                @p.dateBirth
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">Email</div>
+            <div class="col-10">
+                @p.email
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">Country</div>
+            <div class="col-10">
+                @p.country
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">Image</div>
+            <div class="col-10">
+                @p.image
+                <br />
+                <img src="@p.image" />
+            </div>
+        </div>
+    </div>
+    <hr />
+}
