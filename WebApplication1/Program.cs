@@ -21,8 +21,13 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Person}/{id:int}/{action=View}");
+    name: "persone",
+    pattern: "Person/{id:int}",
+    new
+    {
+        controller="Person",
+        action="View"
+    });
 
 app.MapControllerRoute(
     name: "default",
