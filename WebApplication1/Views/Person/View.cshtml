@@ -1,52 +1,48 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model WebApplication1.Models.Person
 
 <div class="container">
     <div class="row">
         <div class="col">ID</div>
         <div class="col-10">
-            @ViewBag.person.id
+            @Model.id
         </div>
     </div>
     <div class="row">
         <div class="col">First Name</div>
         <div class="col-10">
-            @ViewBag.person.firstName
+            @Model.firstName
         </div>
     </div>
     <div class="row">
         <div class="col">Last Name</div>
         <div class="col-10">
-            @ViewBag.person.lastName
+            @Model.lastName
         </div>
     </div>
     <div class="row">
         <div class="col">Birthday</div>
         <div class="col-10">
-            @ViewBag.person.dateBirth
+            @Model.dateBirth
         </div>
     </div>
     <div class="row">
         <div class="col">Email</div>
         <div class="col-10">
-            @ViewBag.person.email
+            @Model.email
         </div>
     </div>
     <div class="row">
         <div class="col">Country</div>
         <div class="col-10">
-            @ViewBag.person.country
+            @Model.country
         </div>
     </div>
     <div class="row">
         <div class="col">Image</div>
         <div class="col-10">
-            @ViewBag.person.image
+            @Model.image
             <br/>
-            <img src="@ViewBag.person.image" />
+            <img src="@Model.image" />
         </div>
     </div>
     

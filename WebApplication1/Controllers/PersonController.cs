@@ -10,11 +10,8 @@ namespace WebApplication1.Controllers
         {
             Debug.WriteLine("ID: " + id.ToString());
             Person? p = Personal_info.GetPerson(id);
-            if (p != null)
-            {
-                ViewBag.person = p;
-                return View();
-            }
+            if (p != null) return View(p);
+
             ViewBag.error = "Not found";
             return View("ErrorAction");
         }
@@ -26,9 +23,25 @@ namespace WebApplication1.Controllers
             return View(res);
         }
 
+        [HttpGet]
         public IActionResult Search()
         {
             return View();
+        }
+
+        [HttpPost]
+        public RedirectToRouteResult Search(Person persone)
+        {
+            Person? res = Personal_info.searchPerson(persone);
+
+            int redirectId;
+            if (res == null) redirectId = -1;
+            else redirectId = res.id;
+            return RedirectToRoute(new {
+                id = redirectId,
+                controller = "Person",
+                action = "View"
+            });
         }
     }
 }

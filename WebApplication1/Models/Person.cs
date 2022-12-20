@@ -39,5 +39,10 @@
         {
             this._id = id;
         }
+
+        public Person()
+        {
+            this._id = -1;
+        }
     }
 }
