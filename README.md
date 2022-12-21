@@ -6,6 +6,8 @@ A simple webapp that follows MVC Architecture. Uses a SQLite database & provides
 * List all persons in person_info table
 * Search for a person by `first_name` or `country`
 
+Make sure to configure the path for the database file before building.
+
 ## Routes
 
 * `Person/{Id}`: Show person with ID
