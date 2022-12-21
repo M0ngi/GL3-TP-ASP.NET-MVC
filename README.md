@@ -15,3 +15,7 @@ Make sure to configure the path for the database file before building.
 * `Person/Search`: Search for a person by `first_name` or `country`
 * `/Home` : Default route
 * `/Home/Privacy` : Default route
+
+## Requirements
+
+* .NET 6.0
